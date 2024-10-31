@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,i.ytimg.com
+DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,raw.githubusercontent.com
 DOMAIN-SUFFIX,github.githubassets.com
