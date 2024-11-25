@@ -1,6 +1,6 @@
 #!name=Google Rewrite
 #!desc=Safari 谷歌搜索重定向（Surge）
-#!system=ios
+!system=ios
 
 [URL Rewrite]
 ^https?://(www.)?g.cn https://www.google.com 302
