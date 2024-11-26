@@ -1,7 +1,0 @@
-#!name=Skip Proxy Lists
-#!desc=跳过部分应用的代理检测
-#!system=ios
-
-[General]
-
-skip-proxy = %APPEND% *.abchina.com.cn
