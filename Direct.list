@@ -75,6 +75,12 @@ DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,douyinstatic.com
 DOMAIN-SUFFIX,douyincdn.com
 DOMAIN-SUFFIX,ks-live.com
+DOMAIN-SUFFIX,360buyimg.com
+DOMAIN-SUFFIX,pinduoduo.net
+DOMAIN-SUFFIX,ucweb.com
+DOMAIN-SUFFIX,alibabachengdun.com
+DOMAIN-SUFFIX,uc.cn
+DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,app-analytics-services.com
 IP-CIDR,114.247.154.2/32
 IP-CIDR,120.46.76.213/32
