@@ -73,6 +73,9 @@ DOMAIN-SUFFIX,qcloud.com
 DOMAIN-SUFFIX,sobot.com
 DOMAIN-SUFFIX,weibo.com
 DOMAIN-SUFFIX,easytomessage.com
+DOMAIN-SUFFIX,douyinstatic.com
+DOMAIN-SUFFIX,douyincdn.com
+DOMAIN-SUFFIX,ks-live.com
 DOMAIN-SUFFIX,app-analytics-services.com
 IP-CIDR,114.247.154.2/32
 IP-CIDR,120.46.76.213/32
