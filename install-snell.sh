@@ -36,7 +36,7 @@ chmod +x $SNELL_DIR/snell-server
 
 # 创建 Snell 配置文件
 echo "正在创建配置文件..."
-mkdir -p /etc/snell
+mkdir -p /root/snell
 cat > $SNELL_CONFIG << EOF
 [snell-server]
 listen = 0.0.0.0:8443
