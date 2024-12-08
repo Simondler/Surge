@@ -11,7 +11,7 @@ SERVICE_FILE="/etc/systemd/system/snell.service"
 # 下载 snell
 apt install unzip
 mkdir snell && cd snell
-wget -O snell-server "$DOWNLOAD_URL" && snell-server
+wget -O snell-server "$DOWNLOAD_URL"
 
 #chmod +x x86_64-qbittorrent-nox
 
