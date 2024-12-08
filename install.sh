@@ -14,6 +14,7 @@ mkdir snell
 cd snell
 wget "$DOWNLOAD_URL"
 unzip snell-server-v4.1.1-linux-amd64.zip
+rm snell-server-v4.1.1-linux-amd64.zip
 
 #chmod +x x86_64-qbittorrent-nox
 
