@@ -14,7 +14,7 @@ case "$ARCH" in
   ARCH_TYPE="amd64"
   ;;
 "aarch64")
-  ARCH_TYPE="arm64"
+  ARCH_TYPE="aarch64"
   ;;
 *)
   echo "未支持的系统架构: $ARCH"
