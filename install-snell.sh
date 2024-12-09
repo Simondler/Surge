@@ -99,10 +99,25 @@ else
   echo "Snell 服务启动失败，请检查日志：journalctl -u snell"
 fi
 
-# 安装bbr
-echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+# 定义需要检查的参数
+PARAMS=("net.core.default_qdisc=fq" "net.ipv4.tcp_congestion_control=bbr")
+
+# 遍历参数并检查是否存在
+for PARAM in "${PARAMS[@]}"; do
+  if grep -q "^$PARAM" /etc/sysctl.conf; then
+    echo "参数已存在: $PARAM"
+  else
+    echo "添加参数: $PARAM"
+    echo "$PARAM" >> /etc/sysctl.conf
+  fi
+done
+
+# 应用配置
+echo "应用 sysctl 配置..."
 sysctl -p
+
+echo "操作完成！"
+
 
 if lsmod | grep bbr; then
    echo "BBR安装成功"
