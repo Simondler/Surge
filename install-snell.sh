@@ -16,6 +16,7 @@ SNELL_SERVICE="/etc/systemd/system/snell.service"
 #更新软件
 apt update
 apt full-upgrade -y
+apt install unzip
 
 # 创建工作目录
 mkdir -p $SNELL_DIR
