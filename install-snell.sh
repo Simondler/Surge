@@ -74,3 +74,14 @@ if systemctl is-active --quiet snell; then
 else
   echo "Snell 服务启动失败，请检查日志：journalctl -u snell"
 fi
+
+# 安装bbr
+
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+lsmod | grep bbr
+
+if lsmod | grep bbr; then
+   echo "BBR安装成功"
+fi
