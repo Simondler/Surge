@@ -13,6 +13,10 @@ SNELL_DIR="/root/snell"
 SNELL_CONFIG="/root/snell/snell.conf"
 SNELL_SERVICE="/etc/systemd/system/snell.service"
 
+#更新软件
+apt update
+apt full-upgrade -y
+
 # 创建工作目录
 mkdir -p $SNELL_DIR
 
