@@ -6,9 +6,28 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
+# 检测系统架构
+ARCH=$(uname -m)
+
+case "$ARCH" in
+"x86_64")
+  ARCH_TYPE="amd64"
+  ;;
+"aarch64")
+  ARCH_TYPE="arm64"
+  ;;
+*)
+  echo "未支持的系统架构: $ARCH"
+  exit 1
+  ;;
+esac
+
+echo "检测到系统架构: $ARCH_TYPE"
+
+
 # 设置变量
 SNELL_VERSION="v4.1.1" # 修改为您想要的版本
-SNELL_URL="https://dl.nssurge.com/snell/snell-server-${SNELL_VERSION}-linux-amd64.zip"
+SNELL_URL="https://dl.nssurge.com/snell/snell-server-${SNELL_VERSION}-linux-${ARCH_TYPE}.zip"
 SNELL_DIR="/root/snell"
 SNELL_CONFIG="/root/snell/snell.conf"
 SNELL_SERVICE="/etc/systemd/system/snell.service"
