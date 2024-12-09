@@ -10,7 +10,7 @@ fi
 SNELL_VERSION="v4.1.1" # 修改为您想要的版本
 SNELL_URL="https://dl.nssurge.com/snell/snell-server-${SNELL_VERSION}-linux-amd64.zip"
 SNELL_DIR="/root/snell"
-SNELL_CONFIG="/root/snell/snell-server.conf"
+SNELL_CONFIG="/root/snell/snell.conf"
 SNELL_SERVICE="/etc/systemd/system/snell.service"
 
 # 创建工作目录
