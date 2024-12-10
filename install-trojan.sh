@@ -54,8 +54,8 @@ cd /root/trojan-go
 
 # 下载 Trojan-Go
 echo "下载 Trojan-Go ($platform)..."
-# latest_version=$(curl -s "https://api.github.com/repos/p4gefau1t/trojan-go/releases/latest" | grep "tag_name" | cut -d '"' -f 4)
-wget -q "https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-${platform}.zip" -O trojan-go.zip
+latest_version=$(curl -s "https://api.github.com/repos/p4gefau1t/trojan-go/releases/latest" | grep "tag_name" | cut -d '"' -f 4)
+wget -q "https://github.com/p4gefau1t/trojan-go/releases/download/${latest_version}/trojan-go-linux-${platform}.zip" -O trojan-go.zip
 unzip -q trojan-go.zip && rm -f trojan-go.zip
 
 
