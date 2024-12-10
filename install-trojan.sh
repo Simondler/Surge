@@ -10,10 +10,30 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
-# 更新系统并安装必要的依赖
-echo "更新系统并安装必要的依赖..."
-apt update && apt upgrade -y || yum update -y
-apt install -y wget curl tar socat unzip || yum install -y wget curl tar socat unzip
+# 定义必要的工具列表
+required_tools=("wget" "curl" "tar" "socat" "unzip")
+
+# 检测并安装所需工具
+echo "检测所需工具是否已安装..."
+install_tools() {
+    for tool in "${required_tools[@]}"; do
+        if ! command -v "$tool" >/dev/null 2>&1; then
+            echo "未检测到 $tool，正在安装..."
+            if [[ -x "$(command -v apt)" ]]; then
+                apt install -y "$tool"
+            elif [[ -x "$(command -v yum)" ]]; then
+                yum install -y "$tool"
+            else
+                echo "无法确定包管理器，请手动安装 $tool！"
+                exit 1
+            fi
+        else
+            echo "$tool 已安装，跳过。"
+        fi
+    done
+}
+install_tools
+
 
 # 检测平台架构
 echo "检测系统架构..."
