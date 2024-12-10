@@ -11,7 +11,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # 定义必要的工具列表
-required_tools=("wget" "curl" "tar" "socat" "unzip")
+required_tools=("wget" "curl" "tar" "unzip")
 
 # 检测并安装所需工具
 echo "检测所需工具是否已安装..."
