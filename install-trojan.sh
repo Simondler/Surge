@@ -90,7 +90,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=nobody
+User=root
 ExecStart=/root/trojan-go/trojan-go -config /root/trojan-go/config.json
 Restart=on-failure
 
