@@ -55,7 +55,7 @@ server {
     listen 443 ssl;
     ssl_certificate     /etc/key/server.crt;
     ssl_certificate_key /etc/key/server.key;
-    server_name  qb.ilmz.net;
+    server_name  *.ilmz.net;
 
 
 location / {
