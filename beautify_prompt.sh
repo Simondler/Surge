@@ -28,7 +28,11 @@ echo -e "3. ${RED}\u@${GREEN}\h:${BLUE}\w${RESET}#"
 echo -e "4. ${CYAN}\u@${YELLOW}\h:${WHITE}\w${RESET}#"
 echo -e "5. ${WHITE}\u@${RED}\h:${GREEN}\w${RESET}#"
 echo -e "6. ${YELLOW}\u@${BLUE}\h:${MAGENTA}\w${RESET}#"
-echo -e "7. 默认样式：\u@\h:\w#"
+echo -e "7. ${BLUE}\u@${MAGENTA}\h:${CYAN}\w${RESET}#"
+echo -e "8. ${CYAN}\u@${RED}\h:${WHITE}\w${RESET}#"
+echo -e "9. ${MAGENTA}\u@${GREEN}\h:${YELLOW}\w${RESET}#"
+echo -e "10. ${YELLOW}\u@${CYAN}\h:${BLUE}\w${RESET}#"
+echo -e "11. 默认样式：\u@\h:\w#"
 
 # 提示用户输入选择
 read -p "请输入对应样式的数字： " choice
@@ -54,6 +58,18 @@ case $choice in
         PS1="${YELLOW}\u@${BLUE}\h:${MAGENTA}\w${RESET}#"
         ;;
     7)
+        PS1="${BLUE}\u@${MAGENTA}\h:${CYAN}\w${RESET}#"
+        ;;
+    8)
+        PS1="${CYAN}\u@${RED}\h:${WHITE}\w${RESET}#"
+        ;;
+    9)
+        PS1="${MAGENTA}\u@${GREEN}\h:${YELLOW}\w${RESET}#"
+        ;;
+    10)
+        PS1="${YELLOW}\u@${CYAN}\h:${BLUE}\w${RESET}#"
+        ;;
+    11)
         PS1="\u@\h:\w#"
         ;;
     *)
