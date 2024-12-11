@@ -19,3 +19,56 @@ sudo apt update
 sudo apt install nginx
 
 nginx -v
+
+cat > /etc/nginx/nginx.conf << "EOF"
+user  root;
+worker_processes  auto;
+  # error_log  /etc/nginx/error.log warn;
+  # pid    /var/run/nginx.pid;
+events {
+    worker_connections  1024;
+    }
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+    log_format  main  '\$remote_addr - \$remote_user [\$time_local] "\$request" '
+                      '\$status \$body_bytes_sent "\$http_referer" '
+                      '"\$http_user_agent" "\$http_x_forwarded_for"';
+  # access_log  /etc/nginx/access.log  main;
+    client_max_body_size 0;
+
+    sendfile       on;
+    tcp_nopush     on;
+    keepalive_timeout  65;
+  # gzip  on;
+server {
+    listen       80;
+    return 301 https://$host$request_uri;
+     }
+   include /etc/nginx/conf.d/*.conf;
+    }
+EOF
+
+
+cat > /etc/nginx/conf.d/default.conf << "EOF"
+server {
+    listen 443 ssl;
+    ssl_certificate     /etc/key/server.crt;
+    ssl_certificate_key /etc/key/server.key;
+    server_name  qb.ilmz.net;
+
+
+location / {
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header Host $http_host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header Range $http_range;
+  proxy_set_header If-Range $http_if_range;
+  proxy_redirect off;
+  proxy_pass http://127.0.0.1:8081;
+  # the max size of file to upload
+  client_max_body_size 20000m;
+  }
+}
+EOF
