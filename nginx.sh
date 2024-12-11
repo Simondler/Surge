@@ -67,8 +67,7 @@ location / {
   proxy_set_header If-Range $http_if_range;
   proxy_redirect off;
   proxy_pass http://127.0.0.1:8081;
-  # the max size of file to upload
-  client_max_body_size 20000m;
+# client_max_body_size 20000m;
   }
 }
 EOF
