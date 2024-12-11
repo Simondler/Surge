@@ -21,7 +21,7 @@ else
 fi
 
 # 显示选项
-echo -e "请选择您喜欢的命令行提示符样式（主机名后用 : 连接路径，去掉 ~ 和 # 之间的空格）："
+echo -e "请选择您喜欢的命令行提示符样式:"
 echo -e "1. ${GREEN}\u@${BLUE}\h:${RED}\w${RESET}#"
 echo -e "2. ${MAGENTA}\u@${CYAN}\h:${YELLOW}\w${RESET}#"
 echo -e "3. ${RED}\u@${GREEN}\h:${BLUE}\w${RESET}#"
