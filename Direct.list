@@ -87,6 +87,7 @@ DOMAIN-SUFFIX,csdnimg.cn
 DOMAIN-SUFFIX,net.cn
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,app-analytics-services.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 IP-CIDR,114.247.154.2/32
 IP-CIDR,120.46.76.213/32
 IP-CIDR,111.22.249.139/32
