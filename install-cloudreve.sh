@@ -39,9 +39,6 @@ rm -f cloudreve.tar.gz
 # 设置执行权限
 chmod +x cloudreve
 
-# 创建必要的目录
-mkdir -p uploads config db
-
 # 创建系统服务
 echo "正在创建系统服务..."
 cat <<EOF > /etc/systemd/system/cloudreve.service
