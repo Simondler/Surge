@@ -29,13 +29,23 @@ else
     exit 1
 fi
 
-# 显示 32 种选项
+# 显示 32 种选项，确保每个部分颜色不重复
 echo -e "请选择您喜欢的命令行提示符样式:"
 for i in {1..32}; do
-    FG_COLOR=${COLORS[$((i % 12))]} # 前景色，去掉 black
-    BG_COLOR=${COLORS[$(((i + 6) % 12))]} # 背景色，去掉 black
-    echo -e "$i. ${FG_COLOR}\u@${BG_COLOR}\h:${FG_COLOR}\w${RESET}#"
+    # 计算颜色索引
+    FG_USER=${COLORS[$((i % 12))]}  # 前景色：用户部分
+    FG_HOST=${COLORS[$(((i + 1) % 12))]}  # 前景色：主机名部分
+    FG_PATH=${COLORS[$(((i + 2) % 12))]}  # 前景色：路径部分
+    
+    # 不允许颜色重复，前景色和背景色不相同
+    BG_USER=${COLORS[$(((i + 3) % 12))]} # 背景色：用户部分
+    BG_HOST=${COLORS[$(((i + 4) % 12))]} # 背景色：主机名部分
+    BG_PATH=${COLORS[$(((i + 5) % 12))]} # 背景色：路径部分
+
+    # 输出样式
+    echo -e "$i. ${FG_USER}\u@${FG_HOST}\h:${FG_PATH}\w${RESET}#"
 done
+
 echo -e "33. 默认样式：\u@\h:\w#"
 
 # 提示用户输入选择
@@ -43,9 +53,16 @@ read -p "请输入对应样式的数字： " choice
 
 # 根据选择生成 PS1
 if [[ $choice -ge 1 && $choice -le 32 ]]; then
-    FG_COLOR=${COLORS[$((choice % 12))]}
-    BG_COLOR=${COLORS[$(((choice + 6) % 12))]}
-    PS1="${FG_COLOR}\u@${BG_COLOR}\h:${FG_COLOR}\w${RESET}#"
+    # 根据用户输入选择不同的颜色组合
+    FG_USER=${COLORS[$((choice % 12))]}
+    FG_HOST=${COLORS[$(((choice + 1) % 12))]}
+    FG_PATH=${COLORS[$(((choice + 2) % 12))]}
+
+    BG_USER=${COLORS[$(((choice + 3) % 12))]}
+    BG_HOST=${COLORS[$(((choice + 4) % 12))]}
+    BG_PATH=${COLORS[$(((choice + 5) % 12))]}
+
+    PS1="${FG_USER}\u@${FG_HOST}\h:${FG_PATH}\w${RESET}#"
 elif [[ $choice -eq 33 ]]; then
     PS1="\u@\h:\w#"
 else
@@ -54,7 +71,7 @@ else
 fi
 
 # 将新的 PS1 写入配置文件
-echo -e "\n# 自定义命令行提示符（支持 32 种颜色，去掉 black）" >> "$CONFIG_FILE"
+echo -e "\n# 自定义命令行提示符（支持 32 种颜色搭配，去掉 black）" >> "$CONFIG_FILE"
 echo "export PS1=\"${PS1}\"" >> "$CONFIG_FILE"
 
 # 加载配置文件
