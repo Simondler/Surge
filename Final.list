@@ -9,6 +9,10 @@ DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,i.ytimg.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,appcenter.ms
+DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,telemetrydeck.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
