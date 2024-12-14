@@ -25,3 +25,4 @@ DOMAIN-SUFFIX,bnbstatic.com
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,forter.com
 DOMAIN-SUFFIX,bntrace.com
+IP-CIDR,95.161.76.101/32
