@@ -76,6 +76,7 @@ DOMAIN-SUFFIX,youdao.com
 DOMAIN-SUFFIX,qcloud.com
 DOMAIN-SUFFIX,sobot.com
 DOMAIN-SUFFIX,weibo.com
+DOMAIN-SUFFIX,toutiaoimg.com
 DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,douyinstatic.com
 DOMAIN-SUFFIX,douyincdn.com
@@ -95,6 +96,7 @@ DOMAIN-SUFFIX,126.net
 DOMAIN-SUFFIX,jdpay.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,advlion.com
+DOMAIN-SUFFIX,toutiaostatic.com
 DOMAIN-SUFFIX,myhuaweicloud.com
 DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
