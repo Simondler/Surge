@@ -47,7 +47,8 @@ DOMAIN-SUFFIX,ctobsnssdk.com
 DOMAIN-SUFFIX,cmbimg.com
 DOMAIN-SUFFIX,cmbchina.com  
 DOMAIN-SUFFIX,dianping.com  
-DOMAIN-SUFFIX,dingtalk.com  
+DOMAIN-SUFFIX,dingtalk.com 
+DOMAIN-SUFFIX,douyu.com 
 DOMAIN-SUFFIX,douban.com  
 DOMAIN-SUFFIX,doubanio.com  
 DOMAIN-SUFFIX,douyin.com  
@@ -55,6 +56,7 @@ DOMAIN-SUFFIX,douyincdn.com
 DOMAIN-SUFFIX,douyinpic.com  
 DOMAIN-SUFFIX,douyinstatic.com  
 DOMAIN-SUFFIX,douyinvod.com  
+DOMAIN-SUFFIX,douyinliving.com
 DOMAIN-SUFFIX,easytomessage.com  
 DOMAIN-SUFFIX,ecombdapi.com  
 DOMAIN-SUFFIX,ecombdimg.com  
