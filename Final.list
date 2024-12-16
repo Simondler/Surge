@@ -11,6 +11,7 @@ DOMAIN-SUFFIX,lookup-api.apple.com // Dictionary
 DOMAIN-SUFFIX,apps.apple.com
 PROCESS-NAME,storedownloadd // Mac App Store
 USER-AGENT,com.apple.appstored* // iOS App Store
+DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,91porn.com  
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,adjust.com  
