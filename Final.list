@@ -17,11 +17,13 @@ DOMAIN-SUFFIX,adobedtm.com
 DOMAIN-SUFFIX,amazonaws.com  
 DOMAIN-SUFFIX,appcenter.ms  
 DOMAIN-SUFFIX,appsflyer.com  
+DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,binance.com  
 DOMAIN-SUFFIX,binance.info  
 DOMAIN-SUFFIX,bnbstatic.com  
 DOMAIN-SUFFIX,bntrace.com 
 DOMAIN-SUFFIX,chatgpt.com 
+DOMAIN-SUFFIX,chatbotapp.ai
 DOMAIN-SUFFIX,cdninstagram.com  
 DOMAIN-SUFFIX,cedexis-radar.net  
 DOMAIN-SUFFIX,cedexis-test.com  
@@ -31,6 +33,7 @@ DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,emby.ilmz.net  
 DOMAIN-SUFFIX,emby.wtf  
 DOMAIN-SUFFIX,facebook.com  
+DOMAIN-SUFFIX,facebook.net
 DOMAIN-SUFFIX,fbcdn.net  
 DOMAIN-SUFFIX,forter.com  
 DOMAIN-SUFFIX,gateway.feignapi  
@@ -41,6 +44,7 @@ DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleusercontent.com  
 DOMAIN-SUFFIX,googlevideo.com  
 DOMAIN-SUFFIX,github.com  
+DOMAIN-SUFFIX,growthbook.io
 DOMAIN-SUFFIX,githubassets.com  
 DOMAIN-SUFFIX,githubusercontent.com  
 DOMAIN-SUFFIX,himalaya.com  
