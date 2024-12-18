@@ -32,6 +32,7 @@ DOMAIN-SUFFIX,cedexis-radar.net
 DOMAIN-SUFFIX,cedexis-test.com  
 DOMAIN-SUFFIX,cedexis.com  
 DOMAIN-SUFFIX,cloudflare.com  
+DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,digicert.com  
 DOMAIN-SUFFIX,emby.ilmz.net  
