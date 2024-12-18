@@ -58,11 +58,16 @@ DOMAIN-SUFFIX,honey.io
 DOMAIN-SUFFIX,i.ytimg.com  
 DOMAIN-SUFFIX,instagram.com  
 DOMAIN-SUFFIX,instabug.com  
-DOMAIN-SUFFIX,iterable.com  
+DOMAIN-SUFFIX,iterable.com 
+DOMAIN-SUFFIX,javdb.com 
+DOMAIN-SUFFIX,javbus.com
 DOMAIN-SUFFIX,line-apps.com  
 DOMAIN-SUFFIX,line-scdn.net  
 DOMAIN-SUFFIX,linecorp.com  
 DOMAIN-SUFFIX,me.com 
+DOMAIN-SUFFIX,missav.com
+DOMAIN-SUFFIX,netflav.com
+DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,openai.com 
 DOMAIN-SUFFIX,paypal.com  
 DOMAIN-SUFFIX,paypalobjects.com  
@@ -82,6 +87,7 @@ DOMAIN-SUFFIX,telemetrydeck.com
 DOMAIN-SUFFIX,twimg.com  
 DOMAIN-SUFFIX,twitter.com  
 DOMAIN-SUFFIX,v2ex.com  
+DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,youtube.com  
 IP-CIDR,91.108.56.0/24
 IP-CIDR,95.161.76.101/32
