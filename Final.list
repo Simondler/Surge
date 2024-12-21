@@ -101,6 +101,7 @@ DOMAIN-SUFFIX,withgoogle.com
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xvideos-cdn.com
 DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,youtube.com 
 DOMAIN-SUFFIX,youjizz.com 
 IP-CIDR,95.161.76.101/32
