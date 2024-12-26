@@ -66,7 +66,7 @@ location / {
   proxy_set_header Range $http_range;
   proxy_set_header If-Range $http_if_range;
   proxy_redirect off;
-  proxy_pass http://127.0.0.1:8081;
+  proxy_pass http://127.0.0.1:5212;
 # client_max_body_size 20000m;
   }
 }
