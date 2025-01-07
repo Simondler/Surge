@@ -162,5 +162,6 @@ DOMAIN-SUFFIX,youdao.com
 DOMAIN-SUFFIX,youku.com  
 DOMAIN-SUFFIX,youzanyun.com
 DOMAIN-SUFFIX,zhihu.com 
+DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zijieapi.com
 IP-CIDR,120.77.201.47/32
