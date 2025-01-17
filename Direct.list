@@ -86,7 +86,7 @@ DOMAIN-SUFFIX,ke.com
 DOMAIN-SUFFIX,ks-live.com  
 DOMAIN-SUFFIX,ljcdn.com  
 DOMAIN-SUFFIX,lianjia.com  
-DOMAIN-SUFFIX,ls.apple.com  //Apple Maps
+#DOMAIN-SUFFIX,ls.apple.com  //Apple Maps
 DOMAIN-SUFFIX,meituan.com  
 DOMAIN-SUFFIX,meituan.net  
 DOMAIN-SUFFIX,mentamob.com  
@@ -124,7 +124,7 @@ DOMAIN-SUFFIX,qidian.com
 DOMAIN-SUFFIX,qishui.com  
 DOMAIN,rust.ilmz.net
 DOMAIN-SUFFIX,realsee.com
-DOMAIN-SUFFIX,store.apple.com //Apple Store Online
+#DOMAIN-SUFFIX,store.apple.com //Apple Store Online
 DOMAIN-SUFFIX,snssdk.com  
 DOMAIN-SUFFIX,sobot.com  
 DOMAIN-SUFFIX,sspai.com
