@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,facebook.net
 DOMAIN-SUFFIX,fbcdn.net  
 DOMAIN-SUFFIX,forter.com  
+DOMAIN-SUFFIX,gvnumber.com
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,gateway.feignapi  
 DOMAIN-SUFFIX,ggpht.com  
@@ -91,6 +92,8 @@ DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,tampermonkey.net
 DOMAIN-SUFFIX,theporndude.com
 DOMAIN-SUFFIX,v2ex.com  
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,withgoogle.com
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,xvideos.com
