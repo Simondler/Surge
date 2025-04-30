@@ -1,0 +1,11 @@
+#!name=Github 429
+#!desc=解除 Github 429 限制
+#!date=2025-04-29
+#!author=解除Github429限制
+
+
+[Header Rewrite]
+http-request ^https:\/\/(.*\.)?githubusercontent\.com\/ header-del Accept-Language
+
+[MITM]
+hostname = %APPEND% *.githubusercontent.com
