@@ -51,6 +51,7 @@ DOMAIN-SUFFIX,che168.com
 DOMAIN-SUFFIX,ctobsnssdk.com  
 DOMAIN-SUFFIX,cmbimg.com
 DOMAIN-SUFFIX,cmbchina.com  
+DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,dianping.com  
 DOMAIN-SUFFIX,dingtalk.com 
 DOMAIN-SUFFIX,douyu.com 
@@ -126,7 +127,6 @@ DOMAIN-SUFFIX,qishui.com
 DOMAIN,rust.ilmz.net
 DOMAIN-SUFFIX,realsee.com
 DOMAIN-SUFFIX,routerlogin.net
-DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,snssdk.com  
 DOMAIN-SUFFIX,sobot.com  
 DOMAIN-SUFFIX,sspai.com
