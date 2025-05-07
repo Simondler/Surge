@@ -176,4 +176,4 @@ IP-CIDR,120.77.201.47/32
 DOMAIN-KEYWORD,.tmall.
 USER-AGENT,WeChat*
 USER-AGENT,MApi*
-USER-AGENT,MicroMessenger
+USER-AGENT,MicroMessenger Client
