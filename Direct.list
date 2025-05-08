@@ -168,7 +168,6 @@ DOMAIN-SUFFIX,zto.com
 DOMAIN-SUFFIX,zhihu.com 
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zijieapi.com
-DOMAIN-KEYWORD,.tmall.
 USER-AGENT,WeChat*
 USER-AGENT,MApi*
 USER-AGENT,MicroMessenger Client
