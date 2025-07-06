@@ -26,7 +26,7 @@ echo "检测到系统架构: $ARCH_TYPE"
 
 
 # 设置变量
-SNELL_VERSION="v5.0.0b1" # 修改为您想要的版本
+SNELL_VERSION="v5.0.0b2" # 修改为您想要的版本
 SNELL_URL="https://dl.nssurge.com/snell/snell-server-${SNELL_VERSION}-linux-${ARCH_TYPE}.zip"
 SNELL_DIR="/etc/snell"
 SNELL_CONFIG="/etc/snell/snell.conf"
