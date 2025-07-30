@@ -62,7 +62,7 @@ chmod +x $SNELL_DIR/snell-server
 echo "正在创建配置文件..."
 cat > $SNELL_CONFIG << EOF
 [snell-server]
-listen = ::0:8443
+listen = 0.0.0.0:8443
 dns = 1.1.1.1, 8.8.8.8
 psk = AijHCeos15IvqDZTb1cJMX5GcgZzIVE
 ipv6 = false
