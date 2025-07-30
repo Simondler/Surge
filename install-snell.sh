@@ -101,7 +101,7 @@ else
 fi
 
 # 定义需要检查的参数
-PARAMS=("net.ipv6.conf.all.disable_ipv6 = 1" "net.core.default_qdisc = fq" "net.ipv4.tcp_congestion_control = bbr" "net.ipv4.tcp_fastopen = 0" "net.ipv4.tcp_ecn = 1" "vm.swappiness = 0")
+PARAMS=("net.core.default_qdisc = fq" "net.ipv4.tcp_congestion_control = bbr" "net.ipv4.tcp_fastopen = 0" "net.ipv4.tcp_ecn = 1" "vm.swappiness = 0")
 
 # 遍历参数并检查是否存在
 for PARAM in "${PARAMS[@]}"; do
