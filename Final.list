@@ -26,6 +26,9 @@ DOMAIN-SUFFIX,cedexis.com
 DOMAIN-SUFFIX,cloudflare.com  
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.net
 DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,deepl.com
