@@ -53,6 +53,7 @@ EOF
 cat > /etc/nginx/conf.d/default.conf << "EOF"
 server {
     listen 443 ssl;
+    http2       on;
     ssl_certificate     /etc/key/server.crt;
     ssl_certificate_key /etc/key/server.key;
     server_name  *.ilmz.net;
