@@ -17,4 +17,5 @@ backend = systemd
 EOF
 
 sudo systemctl restart fail2ban.service
+sudo systemctl enable fail2ban.service
 sudo systemctl status fail2ban.service
