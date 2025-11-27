@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install fail2ban
 
-sudo cat > cat /etc/fail2ban/jail.local <<EOF
+sudo cat > /etc/fail2ban/jail.local <<EOF
 [DEFAULT]
 bantime = -1
 findtime = -1
