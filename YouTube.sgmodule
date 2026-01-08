@@ -13,7 +13,6 @@
 URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJECT-TINYGIF
 
 [Script]
-# YouTube
 🍿️ DualSubs.YouTube.Player.request.json = type=http-request, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.+)?$, requires-body=1, engine=webview, script-path=https://github.com/DualSubs/YouTube/releases/download/v1.5.11/request.bundle.js, argument=Type="{{{Type}}}"&Types="{{{Types}}}"&AutoCC="{{{AutoCC}}}"&Position="{{{Position}}}"&Vendor="{{{Vendor}}}"&ShowOnly="{{{ShowOnly}}}"&LogLevel="{{{LogLevel}}}"
 🍿️ DualSubs.YouTube.Player.response.json = type=http-response, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.+)?$, requires-body=1, engine=webview, script-path=https://github.com/DualSubs/YouTube/releases/download/v1.5.11/response.bundle.js, argument=Type="{{{Type}}}"&Types="{{{Types}}}"&AutoCC="{{{AutoCC}}}"&Position="{{{Position}}}"&Vendor="{{{Vendor}}}"&ShowOnly="{{{ShowOnly}}}"&LogLevel="{{{LogLevel}}}"
 🍿️ DualSubs.YouTube.Player.request.proto = type=http-request, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player(\?.+)?$, requires-body=1, binary-body-mode=1, engine=webview, script-path=https://github.com/DualSubs/YouTube/releases/download/v1.5.11/request.bundle.js, argument=Type="{{{Type}}}"&Types="{{{Types}}}"&AutoCC="{{{AutoCC}}}"&Position="{{{Position}}}"&Vendor="{{{Vendor}}}"&ShowOnly="{{{ShowOnly}}}"&LogLevel="{{{LogLevel}}}"
