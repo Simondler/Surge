@@ -52,23 +52,31 @@ EOF
 
 cat > /etc/nginx/conf.d/default.conf << "EOF"
 server {
-    listen 443 ssl;
+    listen 443 ssl; 
     http2       on;
+    server_name emby.ilmz.net;
+
     ssl_certificate     /etc/key/server.crt;
     ssl_certificate_key /etc/key/server.key;
-    server_name  *.ilmz.net;
 
 
-location / {
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Proto $scheme;
-  proxy_set_header Host $http_host;
-  proxy_set_header X-Real-IP $remote_addr;
-  proxy_set_header Range $http_range;
-  proxy_set_header If-Range $http_if_range;
-  proxy_redirect off;
-  proxy_pass http://127.0.0.1:5212;
-# client_max_body_size 20000m;
-  }
+    location / {
+        proxy_pass http://127.0.0.1:8096;
+
+        # 真实 IP
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $http_host;
+
+        # 媒体文件关键：支持拖动
+        proxy_set_header Range $http_range;
+        proxy_set_header If-Range $http_if_range;
+
+        proxy_redirect off;
+
+        # 长时间视频播放保持稳定
+        proxy_read_timeout 3600s;
+    }
 }
 EOF
