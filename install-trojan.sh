@@ -49,8 +49,8 @@ fi
 echo "检测到架构: $platform"
 
 # 创建必要的目录
-mkdir -p /root/trojan-go
-cd /root/trojan-go
+mkdir -p /etc/trojan-go
+cd /etc/trojan-go
 
 # 下载 Trojan-Go
 echo "下载 Trojan-Go ($platform)..."
@@ -91,7 +91,7 @@ After=network.target
 [Service]
 Type=simple
 User=root
-ExecStart=/root/trojan-go/trojan-go -config /root/trojan-go/config.json
+ExecStart=/etc/trojan-go/trojan-go -config /etc/trojan-go/config.json
 Restart=on-failure
 
 [Install]
