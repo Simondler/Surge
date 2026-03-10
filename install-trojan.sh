@@ -61,7 +61,7 @@ unzip -q trojan-go.zip && rm -f trojan-go.zip
 
 # 创建配置文件
 echo "创建配置文件..."
-cat > /root/trojan-go/config.json <<EOF
+cat > /etc/trojan-go/config.json <<EOF
 {
     "run_type": "server",
     "local_addr": "0.0.0.0",
