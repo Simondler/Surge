@@ -79,10 +79,7 @@ server {
         # 媒体文件关键：支持拖动
         proxy_set_header Range $http_range;
         proxy_set_header If-Range $http_if_range;
-
         proxy_redirect off;
-        
-        8096;
     
         # 增加以下三行支持 WebSocket
         proxy_http_version 1.1;
