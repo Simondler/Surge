@@ -66,12 +66,6 @@ server {
         ssl_session_timeout        1h;
         ssl_session_cache          shared:SSL:10m;
 
-        ssl_stapling               on;
-        ssl_stapling_verify        on;
-        resolver                   1.1.1.1 valid=60s;
-        resolver_timeout           2s;
-
-
 
     location / {
         proxy_pass http://127.0.0.1:8096;
