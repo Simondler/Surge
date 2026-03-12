@@ -30,7 +30,8 @@ events {
     }
 http {
     access_log off;
-    include       mime.types;
+    
+    include       /etc/nginx/mime.types;
     default_type  application/octet-stream;
     
     client_max_body_size 0;
