@@ -80,11 +80,6 @@ server {
         proxy_set_header Range $http_range;
         proxy_set_header If-Range $http_if_range;
         proxy_redirect off;
-    
-        # 增加以下三行支持 WebSocket
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
 
         # 针对视频流建议关闭
         proxy_buffering off; 
