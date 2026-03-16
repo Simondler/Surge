@@ -2,7 +2,11 @@
 
 # 检查系统架构
 ARCH=$(uname -m)
-CLOUDREVE_VERSION="4.15.0"  # 替换为您需要的版本
+
+# 自动获取 Cloudreve 最新版本
+CLOUDREVE_VERSION=$(curl -s https://api.github.com/repos/cloudreve/Cloudreve/releases/latest | grep '"tag_name"' | cut -d '"' -f4)
+
+echo "检测到最新版本: $CLOUDREVE_VERSION"
 
 # 确定下载链接
 if [[ "$ARCH" == "x86_64" ]]; then
