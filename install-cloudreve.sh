@@ -2,7 +2,7 @@
 
 # 检查系统架构
 ARCH=$(uname -m)
-CLOUDREVE_VERSION="3.8.3"  # 替换为您需要的版本
+CLOUDREVE_VERSION="4.15.0"  # 替换为您需要的版本
 
 # 确定下载链接
 if [[ "$ARCH" == "x86_64" ]]; then
