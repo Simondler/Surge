@@ -87,7 +87,7 @@ DOMAIN-SUFFIX,hhax.org
 DOMAIN-SUFFIX,hdslb.com  
 DOMAIN-SUFFIX,hpplay.com  
 DOMAIN-SUFFIX,huya.com  
-DOMAIN,iosapps.itunes.apple.com:443
+DOMAIN-SUFFIX,iosapps.itunes.apple.com
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,ibytedapm.com  
