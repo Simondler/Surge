@@ -67,6 +67,7 @@ DOMAIN-SUFFIX,growthbook.io
 DOMAIN-SUFFIX,githubassets.com  
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,githubusercontent.com  
+DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN-SUFFIX,hostloc.com
 DOMAIN-SUFFIX,himalaya.com  
 DOMAIN-SUFFIX,htx.com
@@ -165,3 +166,4 @@ IP-CIDR,149.154.167.0/24
 IP-CIDR,149.154.171.0/24
 IP-CIDR,149.154.175.0/24
 IP-CIDR6,2001:b28:f230::/44
+IP-CIDR6,2001:67c:4e8::/48
