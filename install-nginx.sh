@@ -89,3 +89,14 @@ server {
     }
 }
 EOF
+
+cat > /etc/nginx/conf.d/00.conf << "EOF"
+server {
+    listen                     443 ssl;
+    http2                      on;
+
+    ssl_reject_handshake       on;
+    ssl_protocols              TLSv1.2 TLSv1.3;
+    }
+EOF
+
