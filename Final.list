@@ -36,6 +36,7 @@ DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,cloudflareinsights.com
+DOMAIN-SUFFIX,debian.org
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discordapp.net
@@ -146,6 +147,7 @@ DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twitter.com  
 DOMAIN-SUFFIX,tampermonkey.net
 DOMAIN-SUFFIX,theporndude.com
+DOMAIN-SUFFIX,ubuntu.com
 DOMAIN-SUFFIX,v2ex.com 
 DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,whatsapp.net
