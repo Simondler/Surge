@@ -64,7 +64,6 @@ cat > $SNELL_CONFIG << EOF
 [snell-server]
 listen = 0.0.0.0:8443
 psk = AijHCeos15IvqDZTb1cJMX5GcgZzIVE
-mode = unshaped
 dns-ip-preference = prefer-ipv4
 ipv6 = false
 tfo = false
