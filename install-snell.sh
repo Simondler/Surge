@@ -117,6 +117,9 @@ done
 echo "应用 sysctl 配置..."
 sysctl -p
 
+echo "重启snell service"
+systemctl restart snell.service
+
 echo "操作完成！"
 
 
