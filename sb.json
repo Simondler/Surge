@@ -151,35 +151,6 @@
       }, 
       {
         "rule_set": [
-           "apple@cn",
-           "cn",
-           "xbox",
-           "playstation",
-           "nintendo",
-           "steam@cn"
-        ],
-        "action": "route",
-        "outbound": "direct"
-      },
-      {
-        "rule_set": [
-           "geolocation-!cn",
-           "telegram",
-           "telegram_ip",
-           "youtube",
-           "netflix"
-        ],
-        "protocol": [
-          "quic",
-          "stun"
-        ],
-        "action": "reject",
-        "no_drop": true
-      },
-      {
-        "rule_set": [
-           "geolocation-!cn",
-           "telegram",
            "telegram_ip"
         ],
         "action": "route",
@@ -213,12 +184,6 @@
     "default_http_client": "default",
     "final": "🕸️final",
     "rule_set": [
-      {
-        "type": "remote",
-        "tag": ["apple@cn","cn","telegram","xbox","playstation","nintendo","youtube","netflix","steam@cn","geolocation-!cn"],
-        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/{tag}.srs",
-        "update_interval": "48h0m0s"
-      },
       {
         "type": "remote",
         "tag": "telegram_ip",
