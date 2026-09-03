@@ -43,13 +43,6 @@
         "action": "route",
         "server": "fakeip"
      },
-     {
-        "rule_set": [
-          "adblock",
-          "BlockHttpDNS"
-        ],
-        "action": "reject"
-      },
       {
         "query_type": [
           "SVCB",
@@ -158,13 +151,6 @@
       }, 
       {
         "rule_set": [
-          "adblock",
-          "BlockHttpDNS"
-        ],
-        "action": "reject"
-      },
-      {
-        "rule_set": [
            "apple@cn",
            "cn",
            "xbox",
@@ -229,14 +215,8 @@
     "rule_set": [
       {
         "type": "remote",
-        "tag": "BlockHttpDNS",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BlockHttpDNS/BlockHttpDNS.srs",
-        "update_interval": "48h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "adblock",
-        "url": "https://cdn.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblocksingbox.srs",
+        "tag": ["apple@cn","cn","telegram","xbox","playstation","nintendo","youtube","netflix","steam@cn","geolocation-!cn"],
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/{tag}.srs",
         "update_interval": "48h0m0s"
       },
       {
