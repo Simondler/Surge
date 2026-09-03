@@ -8,6 +8,33 @@
   "dns": {
     "servers": [
       {
+        "type": "hosts",
+        "tag": "hosts",
+        "predefined": {
+          "dns.alidns.com": [
+            "223.5.5.5",
+            "223.6.6.6"
+          ],
+          "dns.google": [
+            "8.8.8.8",
+            "8.8.4.4"
+          ]
+        }
+      },
+      {
+        "tag": "google",
+        "type": "https",
+        "server": "dns.google",
+        "domain_resolver": "hosts",
+        "detour": "✈️proxy"
+      },
+      {
+        "tag": "ali",
+        "type": "https",
+        "server": "dns.alidns.com",
+        "domain_resolver": "hosts"
+      },
+      {
         "type": "local",
         "tag": "local"
       },
@@ -76,7 +103,7 @@
         "rewrite_ttl": 150
       }
     ],
-    "final": "local",
+    "final": "google",
     "strategy": "prefer_ipv4",
     "cache_capacity": 16384,
     "optimistic": {
