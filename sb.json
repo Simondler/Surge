@@ -175,6 +175,20 @@
         "action": "resolve"
       },
       {
+        "rule_set": [
+          "geosite-private"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "geosite-cn"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
         "rule_set": "cn_ip",
         "action": "route",
         "outbound": "direct"
@@ -199,6 +213,20 @@
     "default_http_client": "default",
     "final": "🕸️final",
     "rule_set": [
+          {
+        "tag": "geosite-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh//meta-rules-dat@sing/geo/geosite/private.srs",
+        "update_interval": "7d"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh//meta-rules-dat@sing/geo/geosite/cn.srs",
+        "update_interval": "7d"
+      },
       {
         "type": "remote",
         "tag": "telegram_ip",
