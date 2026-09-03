@@ -1,0 +1,362 @@
+{
+  "$schema": "https://sing-box.sagernet.org/schema.json",
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "local",
+        "tag": "local"
+      },
+      {
+        "tag": "fakeip",
+        "type": "fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [  
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "query_type": "AAAA"
+          },
+          {
+            "default_interface_address": "2000::/3",
+            "invert": true
+          }
+        ],
+        "action": "reject"
+      },
+     {
+        "clash_mode": "Direct",
+        "action": "route",
+        "server": "local"
+     },
+     {
+        "clash_mode": "Global",
+        "action": "route",
+        "server": "fakeip"
+     },
+     {
+        "rule_set": [
+          "adblock",
+          "BlockHttpDNS"
+        ],
+        "action": "reject"
+      },
+      {
+        "query_type": [
+          "SVCB",
+          "HTTPS"
+        ],
+        "action": "predefined",
+        "rcode": "NOERROR"
+      },
+      {
+        "domain_suffix": [
+          ".local",
+          ".lan",
+          ".home",
+          "router.asus.com",
+          "tplinkwifi.net",
+          "tplinklogin.net",
+          "miwifi.com",
+          "peiluyou.com",
+          "tendawifi.com"
+        ],
+        "action": "route",
+        "server": "local"
+      },
+      {
+        "rule_set": [
+          "apple@cn",
+          "cn",
+          "xbox",
+          "playstation",
+          "nintendo",
+          "steam@cn"
+        ],
+        "action": "route",
+        "server": "local"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "action": "route",
+        "server": "fakeip",
+        "rewrite_ttl": 150
+      }
+    ],
+    "final": "local",
+    "strategy": "prefer_ipv4",
+    "cache_capacity": 16384,
+    "optimistic": {
+      "enabled": true,
+      "timeout": "5m0s"
+    }
+  },
+  "http_clients": [
+    {
+      "tag": "default",
+      "version": 2,
+      "stream_receive_window": 0,
+      "connection_receive_window": 0
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Global",
+        "action": "route",
+        "outbound": "✈️proxy"
+      },
+      {
+        "clash_mode": "Direct",
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "protocol": "ntp",
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "action": "sniff",
+        "sniffer": [
+          "http",
+          "tls",
+          "quic",
+          "dns"
+        ],
+        "timeout": "100ms"
+      }, 
+      {
+        "rule_set": [
+          "adblock",
+          "BlockHttpDNS"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+           "apple@cn",
+           "cn",
+           "xbox",
+           "playstation",
+           "nintendo",
+           "steam@cn"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+           "geolocation-!cn",
+           "telegram",
+           "telegram_ip",
+           "youtube",
+           "netflix"
+        ],
+        "protocol": [
+          "quic",
+          "stun"
+        ],
+        "action": "reject",
+        "no_drop": true
+      },
+      {
+        "rule_set": [
+          "youtube",
+          "netflix"
+        ],
+        "action": "route",
+        "outbound": "🎬Media"
+      },
+      {
+        "rule_set": [
+           "geolocation-!cn",
+           "telegram",
+           "telegram_ip"
+        ],
+        "action": "route",
+        "outbound": "✈️proxy"
+      },
+      {
+        "action": "resolve"
+      },
+      {
+        "rule_set": "cn_ip",
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "action": "reject",
+        "no_drop": true
+      },
+      {
+        "protocol": [
+          "quic",
+          "stun"
+        ],
+        "action": "reject",
+        "no_drop": true
+      }
+    ],
+    "auto_detect_interface": true,
+    "default_domain_resolver": "local",
+    "default_http_client": "default",
+    "final": "🕸️final",
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "BlockHttpDNS",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BlockHttpDNS/BlockHttpDNS.srs",
+        "update_interval": "48h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": ["apple@cn","cn","telegram","xbox","playstation","nintendo","youtube","netflix","steam@cn","geolocation-!cn"],
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/{tag}.srs",
+        "update_interval": "48h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "adblock",
+        "url": "https://cdn.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblocksingbox.srs",
+        "update_interval": "48h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "telegram_ip",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/telegram.srs",
+        "update_interval": "48h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "cn_ip",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+        "update_interval": "48h0m0s"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "stack": "mixed",
+      "auto_route": true,
+      "strict_route": false,
+      "route_exclude_address": [
+        "17.0.0.0/8"                  
+      ],
+      "endpoint_independent_nat": true,
+      "mtu": 1500
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "✈️proxy",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇬 AZ"
+      ],
+      "default": "🇸🇬 AZ"
+    },
+    {
+      "tag": "🎬Media",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇬 AZ"
+      ],
+      "default": "🇸🇬 AZ"
+    },
+    {
+      "tag": "🕸️final",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇬 AZ"
+      ],
+      "default": "🇸🇬 AZ"
+    },
+    {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇬 AZ"
+      ],
+      "default": "🇸🇬 AZ"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "type": "anytls",
+      "tag": "🇸🇬 AZ",
+
+      "server": "any.ilmz.net",
+      "server_port": 443,
+
+      "password": "WqnmlgbV587",
+
+      "tls": {
+        "enabled": true,
+        "server_name": "any.ilmz.net",
+        "insecure": false
+      }
+    },
+  ],
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "secret": "xxx",
+      "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+      "external_ui_download_detour": "✈️proxy"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true,
+      "store_dns": true
+    }
+  }
+}
