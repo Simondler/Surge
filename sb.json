@@ -192,14 +192,6 @@
       },
       {
         "rule_set": [
-          "youtube",
-          "netflix"
-        ],
-        "action": "route",
-        "outbound": "🎬Media"
-      },
-      {
-        "rule_set": [
            "geolocation-!cn",
            "telegram",
            "telegram_ip"
@@ -239,12 +231,6 @@
         "type": "remote",
         "tag": "BlockHttpDNS",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BlockHttpDNS/BlockHttpDNS.srs",
-        "update_interval": "48h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": ["apple@cn","cn","telegram","xbox","playstation","nintendo","youtube","netflix","steam@cn","geolocation-!cn"],
-        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/{tag}.srs",
         "update_interval": "48h0m0s"
       },
       {
@@ -295,14 +281,6 @@
   "outbounds": [
     {
       "tag": "✈️proxy",
-      "type": "selector",
-      "outbounds": [
-        "🇸🇬 AZ"
-      ],
-      "default": "🇸🇬 AZ"
-    },
-    {
-      "tag": "🎬Media",
       "type": "selector",
       "outbounds": [
         "🇸🇬 AZ"
