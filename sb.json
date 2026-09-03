@@ -67,18 +67,6 @@
         "server": "local"
       },
       {
-        "rule_set": [
-          "apple@cn",
-          "cn",
-          "xbox",
-          "playstation",
-          "nintendo",
-          "steam@cn"
-        ],
-        "action": "route",
-        "server": "local"
-      },
-      {
         "query_type": [
           "A",
           "AAAA"
