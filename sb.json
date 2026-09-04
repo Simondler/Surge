@@ -122,7 +122,7 @@
         ],
         "action": "route",
         "outbound": "Home"
-      }
+      },
       {
         "rule_set": "geosite-cn",
         "action": "route",
