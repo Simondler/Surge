@@ -65,8 +65,8 @@
   ],
   "outbounds": [
     {
-      "tag": "🇸🇬 AZ",
-      "type": "proxy",
+      "tag": "proxy",
+      "type": "snell",
       "server": "4.193.253.108",
       "server_port": 8443,
       "psk": "AijHCeos15IvqDZTb1cJMX5GcgZzIVE",
