@@ -64,6 +64,14 @@
     }
   ],
   "outbounds": [
+   {
+      "tag": "Home",
+      "type": "selector",
+      "outbounds": [
+        "🏠 SS"
+      ],
+      "default": "🏠 SS"
+    },  
     {
       "tag": "Final",
       "type": "selector",
@@ -79,6 +87,15 @@
       "server_port": 8443,
       "psk": "AijHCeos15IvqDZTb1cJMX5GcgZzIVE",
       "version": 6
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🏠 SS",
+      "server": "home.ilmz.net",
+      "server_port": 10010,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "iVUGVKXMW6gAqpNNIKPijA==",
+      "domain_resolver": "dns-cn"
     },
     {
       "type": "direct",
