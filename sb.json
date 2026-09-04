@@ -79,6 +79,16 @@
         "rcode": "NOERROR"
       },
       {
+        "rule_set": ["geosite-private"],
+        "action": "route",
+        "server": "ali"
+      },
+      {
+        "rule_set": ["geosite-cn"],
+        "action": "route",
+        "server": "ali"
+      },
+      {
         "domain_suffix": [
           ".local",
           ".lan",
