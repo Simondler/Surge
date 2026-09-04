@@ -227,14 +227,14 @@
         "tag": "geosite-private",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh//meta-rules-dat@sing/geo/geosite/private.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
         "update_interval": "7d"
       },
       {
         "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh//meta-rules-dat@sing/geo/geosite/cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
         "update_interval": "7d"
       },
       {
