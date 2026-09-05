@@ -117,6 +117,14 @@
         "action": "hijack-dns"
       },
       {
+        "protocol": "quic",
+        "action": "reject"
+      },
+      {
+        "protocol": "stun",
+        "action": "reject"
+      },      
+      {
         "ip_cidr": [
           "192.168.31.0/24"
         ],
