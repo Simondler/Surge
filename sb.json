@@ -121,7 +121,7 @@
           "192.168.31.0/24"
         ],
         "action": "route",
-        "outbound": "direct"
+        "outbound": "Home"
       },
       {
         "rule_set": "geosite-cn",
