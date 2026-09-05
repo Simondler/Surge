@@ -31,7 +31,7 @@
         "server": "local"
       }
     ],
-    "final": "cf",
+    "final": "fakeip",
     "strategy": "prefer_ipv4",
     "reverse_mapping": true
   },
