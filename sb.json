@@ -11,21 +11,11 @@
         "tag": "local"
       },
       {
-        "type": "hosts",
-        "tag": "hosts",
-        "predefined": {
-          "dns.google": [
-            "8.8.8.8",
-            "8.8.4.4"
-          ]
-        }
-      },
-      {
-        "tag": "google",
-        "type": "https",
-        "server": "dns.google",
-        "domain_resolver": "hosts",
-        "detour": "🇸🇬 AZ"
+        "tag": "cf",
+        "type": "udp",
+        "server": "1.1.1.1",
+        "server_port": 53,
+        "detour": "Final"
       },      
       {
         "tag": "fakeip",
@@ -41,7 +31,7 @@
         "server": "local"
       }
     ],
-    "final": "google",
+    "final": "cf",
     "strategy": "prefer_ipv4",
     "reverse_mapping": true
   },
@@ -118,10 +108,12 @@
       },
       {
         "protocol": "quic",
+        "port": 443,
         "action": "reject"
       },
       {
         "protocol": "stun",
+        "port": 443,
         "action": "reject"
       },      
       {
