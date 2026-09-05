@@ -78,18 +78,18 @@
     {
       "tag": "🇸🇬 AZ",
       "type": "snell",
-      "server": "4.193.253.108",
+      "server": "1.2.3.4",
       "server_port": 8443,
-      "psk": "AijHCeos15IvqDZTb1cJMX5GcgZzIVE",
+      "psk": "fhjjjkkjbGjmv",
       "version": 6
     },
     {
       "type": "shadowsocks",
       "tag": "🏠 SS",
-      "server": "home.ilmz.net",
+      "server": "test.com",
       "server_port": 10010,
       "method": "2022-blake3-aes-128-gcm",
-      "password": "iVUGVKXMW6gAqpNNIKPijA==",
+      "password": "chjjjjbnmmm==",
       "domain_resolver": "local"
     },
     {
