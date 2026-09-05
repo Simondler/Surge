@@ -100,7 +100,7 @@
       "server_port": 10010,
       "method": "2022-blake3-aes-128-gcm",
       "password": "iVUGVKXMW6gAqpNNIKPijA==",
-      "domain_resolver": "dns-cn"
+      "domain_resolver": "local"
     },
     {
       "type": "direct",
