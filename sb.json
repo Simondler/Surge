@@ -48,7 +48,7 @@
   "http_clients": [
     {
       "tag": "rules-via-proxy",
-      "detour": "🇸🇬 AZ"
+      "detour": "Final"
     }
   ],
   "inbounds": [
