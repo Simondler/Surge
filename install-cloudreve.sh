@@ -66,7 +66,7 @@ systemctl daemon-reload
 
 # 启动并设置开机自启
 echo "启动 Cloudreve 服务..."
-systemctl start cloudreve
+systemctl restart cloudreve
 systemctl enable cloudreve
 
 echo "Cloudreve 已成功安装并运行！"
