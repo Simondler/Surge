@@ -39,6 +39,9 @@ http {
     tcp_nopush     on;
     keepalive_timeout  65;
     gzip  on;
+    gzip_vary on;
+    gzip_proxied any;
+
 
 server {
     listen       80;
