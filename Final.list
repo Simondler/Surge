@@ -74,6 +74,7 @@ DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,githubusercontent.com  
 DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,hostloc.com
 DOMAIN-SUFFIX,hotmail.com
 DOMAIN-SUFFIX,himalaya.com  
@@ -108,12 +109,14 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,missav.ai
 DOMAIN-SUFFIX,missav.live
 DOMAIN-SUFFIX,missav.ws
+DOMAIN-SUFFIX,mail.me.com
 DOMAIN-SUFFIX,mypikpak.com
 DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,missav.recombee.com
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,netflav.com
 DOMAIN-SUFFIX,nodeseek.com
+DOMAIN-SUFFIX,nodeseek.org
 DOMAIN-SUFFIX,nodeimage.com
 DOMAIN-SUFFIX,paypal.com  
 DOMAIN-SUFFIX,paypalobjects.com
