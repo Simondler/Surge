@@ -87,6 +87,8 @@ DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,goofish.com  
 DOMAIN-SUFFIX,gdtimg.com
 DOMAIN-SUFFIX,home.ilmz.net
+DOMAIN-SUFFIX,huaweicloud.com
+DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,hhax.org
 DOMAIN-SUFFIX,hdslb.com  
 DOMAIN-SUFFIX,hpplay.com  
@@ -165,7 +167,8 @@ DOMAIN-SUFFIX,tanx.com
 DOMAIN-SUFFIX,toutiaovod.com
 DOMAIN-SUFFIX,tencent-cloud.com  
 DOMAIN-SUFFIX,tencent-cloud.net  
-DOMAIN-SUFFIX,tencent.com  
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,tencentcloud.com  
 DOMAIN-SUFFIX,tmall.com  
 DOMAIN-SUFFIX,toutiao.com  
 DOMAIN-SUFFIX,toutiaovod.com
