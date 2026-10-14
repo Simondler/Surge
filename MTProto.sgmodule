@@ -4,6 +4,6 @@
 
 [MTProto]
 interface = 127.0.0.1
-port = 5753
+port = 1024
 secret = b8869a8634fabf940bda536a21b418b6
 ipv6 = false
