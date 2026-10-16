@@ -804,7 +804,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send(200, 'ok')
             return
         if path == '/all.m3u':
-            host = self.headers.get('Host', 'localhost:8767')
+            host = self.headers.get('Host', 'localhost:1024')
             lines = ['#EXTM3U']
             for slug, name, _s, _p, _d in CHANNELS:
                 lines.append('#EXTINF:-1,%s' % name)
@@ -866,7 +866,7 @@ def index_page():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('port', nargs='?', type=int, default=8767)
+    ap.add_argument('port', nargs='?', type=int, default=1024)
     ap.add_argument('--no-4k', action='store_true', help='不启动 4K 后端')
     args = ap.parse_args()
     if not args.no_4k:
