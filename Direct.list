@@ -87,7 +87,8 @@ DOMAIN-SUFFIX,gtimg.com
 DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,goofish.com  
 DOMAIN-SUFFIX,gdtimg.com
-DOMAIN-SUFFIX,home.ilmz.net
+DOMAIN,home.ilmz.net
+DOMAIN,homev6.ilmz.net
 DOMAIN-SUFFIX,huaweicloud.com
 DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,hhax.org
@@ -124,7 +125,7 @@ DOMAIN-SUFFIX,mentamob.com
 DOMAIN-SUFFIX,miot-spec.org  
 DOMAIN-SUFFIX,mi-img.com  
 DOMAIN-SUFFIX,mi.com 
-DOMAIN-SUFFIX,mi.ilmz.net
+DOMAIN,mi.ilmz.net
 DOMAIN-SUFFIX,miwifi.com 
 DOMAIN-SUFFIX,mijia.tech  
 DOMAIN-SUFFIX,miui.com  
@@ -135,7 +136,7 @@ DOMAIN-SUFFIX,myqcloud.com
 DOMAIN-SUFFIX,netease.com  
 DOMAIN-SUFFIX,niu.com  
 DOMAIN-SUFFIX,niucache.com  
-DOMAIN-SUFFIX,op.ilmz.net
+DOMAIN,op.ilmz.net
 DOMAIN-SUFFIX,onethingpcs.com
 DOMAIN-SUFFIX,open-douyin.com  
 DOMAIN-SUFFIX,openinstall.io  
