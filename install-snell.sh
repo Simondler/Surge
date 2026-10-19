@@ -65,8 +65,7 @@ cat > $SNELL_CONFIG << EOF
 listen = 0.0.0.0:8443,[::]:8443
 psk = AijHCeos15IvqDZTb1cJMX5GcgZzIVE
 dns-ip-preference = default
-tfo = false
-obfs = off
+mode = default
 EOF
 
 # 创建 Systemd 服务文件
