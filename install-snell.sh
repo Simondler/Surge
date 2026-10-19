@@ -65,7 +65,6 @@ cat > $SNELL_CONFIG << EOF
 listen = ::0:8443
 psk = AijHCeos15IvqDZTb1cJMX5GcgZzIVE
 dns-ip-preference = default
-ipv6 = false
 tfo = false
 obfs = off
 EOF
