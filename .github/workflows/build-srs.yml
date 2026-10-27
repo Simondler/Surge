@@ -1,0 +1,45 @@
+name: Build SRS to sb branch
+
+on:
+  push:
+    branches:
+      - main     # 如果你的默认主分支叫 master，也可以保留下面的 master
+      - master
+    paths:
+      - '**.list'
+      - 'list2srs.py'
+      - '.github/workflows/build-srs.yml'
+  workflow_dispatch: # 允许在网页端手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. 检出主分支代码
+        uses: actions/checkout@v4
+
+      - name: 2. 安装官方最新版 sing-box
+        run: |
+          sudo mkdir -p /etc/apt/keyrings
+          sudo curl -fsSL https://sing-box.app/gpg.key -o /etc/apt/keyrings/sagernet.asc
+          sudo chmod a+r /etc/apt/keyrings/sagernet.asc
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/sagernet.asc] https://deb.sagernet.org/ * *" | sudo tee /etc/apt/sources.list.d/sagernet.list > /dev/null
+          sudo apt-get update
+          sudo apt-get install -y sing-box
+
+      - name: 3. 转换 .list 并输出 .srs 到 dist 目录
+        run: |
+          mkdir -p dist
+          python3 list2srs.py dist
+
+      - name: 4. 将生成的 .srs 推送到 sb 分支
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: sb
+          publish_dir: ./dist
+          force_orphan: true # 保持 sb 分支历史干净，永远只有最新一版提交（如需保留历史记录可改为 false）
+          commit_message: "chore: auto-compile .srs from main branch"
