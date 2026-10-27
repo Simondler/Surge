@@ -79,7 +79,7 @@ def convert_file(list_path, out_dir="dist"):
     }
 
     # 保持原有的相对目录结构输出到 out_dir
-    rel_path = os.path.relpath(list_path, '.')
+    rel_path = os.path.basename(list_path)
     base_name = os.path.splitext(rel_path)[0]
     target_base = os.path.join(out_dir, base_name)
     
